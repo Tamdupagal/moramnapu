@@ -4,7 +4,8 @@ import s from './Navbar.module.css'
 import NavbarRoot from './NavbarRoot'
 import { Logo, Container } from '@components/ui'
 import { Searchbar, UserNav } from '@components/common'
-
+import LogoM from '../../../assets/logo.png'
+import Image from 'next/image'
 interface Link {
   href: string
   label: string
@@ -20,7 +21,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/" className={s.logo} aria-label="Logo">
-            <Logo />
+            <Image src={LogoM} width={50} height={50} alt="heroimage" />
           </Link>
           <nav className={s.navMenu}>
             <Link href="/search" className={s.link}>
